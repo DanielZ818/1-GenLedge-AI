@@ -119,15 +119,13 @@ Briefly describe which option you have agreed to.
 
 #### Q7: What are the roles & responsibilities on the team?
 
-# TODO: daniel needs to fix his description
-# TODO: Wuqingyi needs to add her descroption
 # TODO: should we describe responsibilities about the components that we specifically work on?
 
 Overall roles: 2 Frontend (visualization), 5 backend (API, data pipeline, cloud service, A.I.)
 
 Sida - backend: I chose this because this bit would be around practical use of AI and API’s which would help me in understanding how these practical tools should be correctly used so that I could use them wisely and strengthen my skills with using them.
 
-Daniel - backend & liaison: 排除法 我不擅长backend
+Daniel - backend & liaison: I chose backend because I want to learn how to build an AI agent and understand the agentic loop. I also want to gain more experience with APIs, cloud services, and system integration. My past experience with AI and data pipelines will help me contribute to the team. This role will also help me improve my backend skills and learn how these tools are used in a real system.
 
 Yifu Liang - backend: I chose the backend role to gain hands-on experience with APIs, cloud services, and system integration. My previous experience with AI and data pipelines allows me to contribute effectively while also developing practical backend engineering skills that I have had less exposure to.
 
@@ -137,7 +135,7 @@ Xiran - frontend: Choosing this role since I have experience developing interact
 
 Kunyu Li - Frontend: I chose this role because I have experience designing interactive, user-friendly, and easy-to-understand interfaces, and I’m interested in learning more about frontend development and design. 
 
-Wuqingyi Wang - backend:
+Wuqingyi Wang - backend: I chose this role because I have previous experience with PostgreSQL, relational database design, and API-backed applications. I am interested in how AI agents analyze ERP data, generate mappings and transformations, and improve through validation and human feedback.
 
 
 
