@@ -1,6 +1,8 @@
 # YOUR PRODUCT/TEAM NAME
+
 > _Note:_ This document will evolve throughout your project. You commit regularly to this file while working on the project (especially edits/additions/deletions to the _Highlights_ section). 
- > **This document will serve as a master plan between your team, your partner and your TA.**
+>
+> **This document will serve as a master plan between your team, your partner and your TA.**
 
 ## Product Details
  
@@ -46,48 +48,53 @@ This supports GenLedge’s stated direction: using AI assistants to perform repe
 #### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?
 
 ##### US1 - Authentication：
-As a user of the app, I want to sign in securely in order to access GenLedge and manage my 
-organization's data.
+
+As a user of the app, I want to sign in securely in order to access GenLedge and manage my organization's data.
 
 ##### US2 - Import Data
-As a data owner, I want to upload files or connect my organization's database in order to make my 
-organization's data available to GenLedge for processing.
+
+As a data owner, I want to upload files or connect my organization's database in order to make my organization's data available to GenLedge for processing.
 
 ##### US3 - Discover Source Data
-As a data owner, I want GenLedge to automatically discover and display the structure of my source 
-data in order to understand what information is available for processing
+
+As a data owner, I want GenLedge to automatically discover and display the structure of my source data in order to understand what information is available for processing
 
 ##### US4 - Automatically Map / Route Data
-As a data owner, I want GenLedge to automatically determine where my source data belongs in the 
-warehouse in order to reduce the amount of manual data engineering required.
+
+As a data owner, I want GenLedge to automatically determine where my source data belongs in the warehouse in order to reduce the amount of manual data engineering required.
 
 ##### US5 - Review and Modify Mappings
-As a data reviewer, I want to review and modify source-to-warehouse mappings in order to ensure that 
-my data is mapped correctly before it is loaded.
+
+As a data reviewer, I want to review and modify source-to-warehouse mappings in order to ensure that my data is mapped correctly before it is loaded.
 
 ##### US6 - Transform and Load Data
-As a data reviewer, I want GenLedge to transform and load mapped source data into the warehouse in 
-order to produce clean, structured data for analytics.
+
+As a data reviewer, I want GenLedge to transform and load mapped source data into the warehouse in order to produce clean, structured data for analytics.
 
 ##### US7 - Schedule and Monitor Pipelines
-As a data operator, I want to schedule and monitor my data pipelines in order to keep the warehouse 
-data up to date and identify failed data loads.
+
+As a data operator, I want to schedule and monitor my data pipelines in order to keep the warehouse data up to date and identify failed data loads.
 
 
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
 
 # TODO
+
 > Short (1-2 min' read max)
- * What is the technology stack? Specify languages, frameworks, libraries, PaaS products or tools to be used or being considered. 
- * How will you deploy the application?
- * Describe the architecture - what are the high level components or patterns you will use? Diagrams are useful here. 
- * Will you be using third party applications or APIs? If so, what are they?
+
+* What is the technology stack? Specify languages, frameworks, libraries, PaaS products or tools to be used or being considered.
+* How will you deploy the application?
+* Describe the architecture - what are the high level components or patterns you will use? Diagrams are useful here.
+* Will you be using third party applications or APIs? If so, what are they?
 
 ----
+
 ## Intellectual Property Confidentiality Agreement 
+
 > Note this section is **not marked** but must be completed briefly if you have a partner. If you have any questions, please ask on Piazza.
 >  
 **By default, you own any work that you do as part of your coursework.** However, some partners may want you to keep the project confidential after the course is complete. As part of your first deliverable, you should discuss and agree upon an option with your partner. Examples include:
+
 1. You can share the software and the code freely with anyone with or without a license, regardless of domain, for any use.
 2. You can upload the code to GitHub or other similar publicly available domains.
 3. You will only share the code under an open-source license with the partner but agree to not distribute it in any way to any other entity or individual. 
@@ -116,9 +123,6 @@ Briefly describe which option you have agreed to.
 # TODO: Wuqingyi needs to add her descroption
 # TODO: should we describe responsibilities about the components that we specifically work on?
 
-
- * Add role(s) to your Team-[Team_Number]-[Team_Name].csv file on the main folder.
-
 Overall roles: 2 Frontend (visualization), 5 backend (API, data pipeline, cloud service, A.I.)
 
 Sida - backend: I chose this because this bit would be around practical use of AI and API’s which would help me in understanding how these practical tools should be correctly used so that I could use them wisely and strengthen my skills with using them.
@@ -140,6 +144,7 @@ Wuqingyi Wang - backend:
 #### Q8: How will you work as a team?
 
 Meeting plan: 
+
 - On Tuesday: 
   - Team meet before TUT: summarize weekly outcome and prepare questions to communicate with our amazing TA 
   - TUT meeting with TA: clarify confusion, ask suggestions in technical development, etc. 
@@ -254,6 +259,7 @@ This role fits our team’s experience with data processing, LLMs, AI agents, an
 
 
 #### Q12. How does your project fit within the overall product from the partner?
+
 **Fit within GenLedge:** GenLedge already has an ERP platform where AI agents automate operational workflows. Our project adds the analytics layer on top of this system, turning ERP and related business data into analytics-ready datasets, reports, and dashboards without placing reporting workloads directly on the operational system. 
 
 **Our contribution:** We are extending an existing MVP rather than starting from scratch. The current prototype supports source introspection, target creation, manual pipeline mapping, run history, and data loading; our main contribution is evolving this into an agentic pipeline where the LLM proposes mappings and transformations and admins review or override them. 
