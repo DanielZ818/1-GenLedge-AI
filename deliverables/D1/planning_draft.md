@@ -111,8 +111,8 @@ Briefly describe which option you have agreed to.
 
 #### Q6: Have you met with your team?
 
-# TODO: paste the photos later
-
+![image1](image1.jpg)
+![image2](image2.jpg)
 - Steven has a 4.0 cGPA.
 - Steven tutored everyone on this team to play basketball, football, badminton, jogging, swimming, cross - country, rock climbing, marathon, lifting, and diving. He was also once sponsored by Red Bull.
 - Michael, a member of our team, won first place in a go-kart tournament.
