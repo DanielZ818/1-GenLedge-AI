@@ -112,8 +112,6 @@ Briefly describe which option you have agreed to.
 
 #### Q7: What are the roles & responsibilities on the team?
 
-# TODO: add .csv, 
-# TODO: one person must be identified as the dedicated partner liaison
 # TODO: daniel needs to fix his description
 # TODO: Wuqingyi needs to add her descroption
 # TODO: should we describe responsibilities about the components that we specifically work on?
