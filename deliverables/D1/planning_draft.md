@@ -77,35 +77,29 @@ As a data operator, I want to schedule and monitor my data pipelines in order to
 
 
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
+Frontend
+- React
+- Vite
+- TypeScript
+- React Flow — only for the Mapping Studio
 
-# TODO
+Backend
+- Node.js
+- TypeScript
+- Fastify
+- PostgreSQL
+- Prisma
 
-> Short (1-2 min' read max)
+Agent
+- LangGraph.js
+- Claude or OpenAI
 
-* What is the technology stack? Specify languages, frameworks, libraries, PaaS products or tools to be used or being considered.
-* How will you deploy the application?
-* Describe the architecture - what are the high level components or patterns you will use? Diagrams are useful here.
-* Will you be using third party applications or APIs? If so, what are they?
-
-----
+Data processing
+- Python
 
 ## Intellectual Property Confidentiality Agreement 
+You can share the software and the code freely with anyone with or without a license, regardless of domain, for any use.
 
-> Note this section is **not marked** but must be completed briefly if you have a partner. If you have any questions, please ask on Piazza.
->  
-**By default, you own any work that you do as part of your coursework.** However, some partners may want you to keep the project confidential after the course is complete. As part of your first deliverable, you should discuss and agree upon an option with your partner. Examples include:
-
-1. You can share the software and the code freely with anyone with or without a license, regardless of domain, for any use.
-2. You can upload the code to GitHub or other similar publicly available domains.
-3. You will only share the code under an open-source license with the partner but agree to not distribute it in any way to any other entity or individual. 
-4. You will share the code under an open-source license and distribute it as you wish but only the partner can access the system deployed during the course.
-5. You will only reference the work you did in your resume, interviews, etc. You agree to not share the code or software in any capacity with anyone unless your partner has agreed to it.
-
-**Your partner cannot ask you to sign any legal agreements or documents pertaining to non-disclosure, confidentiality, IP ownership, etc.**
-
-Briefly describe which option you have agreed to.
-
-----
 
 ## Teamwork Details
 
@@ -118,8 +112,7 @@ Briefly describe which option you have agreed to.
 - Michael, a member of our team, won first place in a go-kart tournament.
 
 #### Q7: What are the roles & responsibilities on the team?
-
-# TODO: should we describe responsibilities about the components that we specifically work on?
+![image3](image3.jpg)
 
 Overall roles: 2 Frontend (visualization), 5 backend (API, data pipeline, cloud service, A.I.)
 
@@ -155,9 +148,6 @@ Meeting plan:
 
   
 #### Q9: How will you organize your team?
-
-# TODO: review in need
-
 We will use a combination of **Notion, GitHub, and group communication channels** to organize our work and track project progress.
 
 - **Task tracking and documentation**
@@ -281,9 +271,6 @@ This role fits our team’s experience with data processing, LLMs, AI agents, an
 
 
 #### Q14. What are some potential mitigation strategies for the risks you identified?
-
-# TODO: may need more details
-
 Establish a more efficient communication channel between team and partner.
 Be specific on the user story and evaluate the workload accurately. 
 Be reasonable on the project scope. 
