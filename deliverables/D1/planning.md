@@ -78,24 +78,22 @@ As a data operator, I want to schedule and monitor my data pipelines in order to
 
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
 Frontend
-- React
-- Vite
-- TypeScript
-- React Flow — only for the Mapping Studio
-
+React — UI library
+Vite — build tool and development server
+TypeScript — programming language
+React Flow — UI library for the Mapping Studio
 Backend
-- Node.js
-- TypeScript
-- Fastify
-- PostgreSQL
-- Prisma
-
+Node.js — JavaScript runtime
+TypeScript — programming language
+Fastify — web framework
+PostgreSQL — relational database
+Prisma — ORM
 Agent
-- LangGraph.js
-- Claude or OpenAI
+LangGraph.js — agent orchestration framework
+Claude API or OpenAI API — LLM API
+Data Processing
+Python — programming language/runtime
 
-Data processing
-- Python
 
 For the MVP deployment, we will use our own infrastructure to host GenLedge. We will use a Raspberry Pi and our own domain. This keeps the setup simple and low cost. It also lets us focus on the core agentic pipeline. If GenLedge is expanded later, we can move to AWS services such as S3, AWS Glue, and hosted PostgreSQL to support larger workloads.
 
