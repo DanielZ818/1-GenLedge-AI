@@ -46,7 +46,7 @@ This supports GenLedge’s stated direction: using AI assistants to perform repe
 
 
 #### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?
-[Figma Demo](https://www.figma.com/make/5FBkZzoaCpGV83S88IPkY1/--------CSC301-D1-Demo?p=f&t=dNeXPEpMKdHMtUZw-0)
+
 ##### US1 - Authentication：
 
 As a user of the app, I want to sign in securely in order to access GenLedge and manage my organization's data.
