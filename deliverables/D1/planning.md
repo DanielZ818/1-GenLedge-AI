@@ -97,6 +97,8 @@ Agent
 Data processing
 - Python
 
+For the MVP deployment, we will use our own infrastructure to host GenLedge. We will use a Raspberry Pi and our own domain. This keeps the setup simple and low cost. It also lets us focus on the core agentic pipeline. If GenLedge is expanded later, we can move to AWS services such as S3, AWS Glue, and hosted PostgreSQL to support larger workloads.
+
 ## Intellectual Property Confidentiality Agreement 
 You can share the software and the code freely with anyone with or without a license, regardless of domain, for any use.
 
