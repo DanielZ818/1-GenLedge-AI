@@ -1,4 +1,4 @@
-# GenLedge Connector/!!!!!!!
+# GenLedge Connector - !!!!!!!
 
 > _Note:_ This document will evolve throughout your project. You commit regularly to this file while working on the project (especially edits/additions/deletions to the _Highlights_ section). 
 >
@@ -8,7 +8,7 @@
  
 #### Q1: What is the product?
 
-GenLedge is an AI-powered ERP platform designed to act as a digital workforce for enterprise operations, using AI agents to automate tasks that would traditionally require employees to process business GenLedge is an AI-powered ERP platform designed to act as a digital workforce for enterprise operations, using AI agents to automate tasks that would traditionally require employees to process business information manually.
+GenLedge is an AI-powered ERP platform designed to act as a digital workforce for enterprise operations, using AI agents to automate tasks that would traditionally require employees to process business information manually.
 
 Business information can enter the platform through sources such as email, sales orders, purchase orders, banking systems, and other external systems. Agents then use the information available in the ERP to perform business processes such as processing invoices, tracking deliveries, making payments, and managing interactions with vendors and customers, while recording the resulting information in the ERP's database.
 
@@ -18,8 +18,9 @@ For example, an enterprise may want to know how each vendor has performed over t
 
 Our project aims to automate this process with an agentic data pipeline. The user specifies a source and the desired target data, and the AI agent examines the source and target structures, determines how the data should be mapped and transformed, and generates the pipeline for approval and execution.
 
-Our team will build this as a web-based application focused primarily on the backend, covering the pipeline from extracting data from the ERP database, providing the relevant data and tools to the AI agent, executing the generated pipeline, and exporting analytics-ready data into a separate target database.
+Our team will build this as a web-based application focused primarily on the backend, covering the pipeline from extracting data from the ERP database, providing the relevant data and tools to the AI agent, executing the generated pipeline, and exporting analytics-ready data into a separate target database. The next team will focus on taking this preprocessed data, and build an agent that could answer all user inquiries on the data (for example analyze the sales trend).
 
+*Refer to [pipeline visualization](https://drive.google.com/file/d/1Iw_YCqHsjISCauQNGoym3mWENR66wOL0/view?usp=drive_link), [genledge platform diagram](https://drive.google.com/file/d/1lNJbsDIhyfYPJpp-XcwnQV9R-BybB56t/view?usp=sharing), and [mockup figma](https://www.figma.com/make/5FBkZzoaCpGV83S88IPkY1/Demo?code-node-id=0-6\&fullscreen=1)*
 
 #### Q2: Who are your target users?
 
@@ -32,21 +33,27 @@ Our product targets the employee responsible for preparing this data for analyti
 
 #### Q3: Why would your users choose your product? What are they using today to solve their problem/need?
 
-Our product helps GenLedge’s data administrators and finance and operations teams turn enterprise records into useful business information with less manual effort. Data administrators need to prepare reliable reporting data, while business users need answers without understanding database structures or writing queries.
+Our product helps company data administrators and finance and operations teams turn enterprise records into useful business information with less manual effort. Data administrators need to prepare reliable reporting data, while business users need answers without understanding database structures or writing queries.
 
-Today, the workflows described by our partner rely on employees operating ERP systems and developers manually building data pipelines using scripts or configuring no-code tools. Our application reduces this setup work: an AI agent examines source and target structures, proposes mappings and transformations, and prepares a pipeline for human review and approval.
+Today, the workflows rely on employees operating ERP systems and developers manually building data pipelines using scripts or configuring no-code tools. Our application reduces this setup work: an AI agent examines source and target structures, proposes mappings and transformations, and prepares a pipeline for human review and approval.
 
 Once the data is available, users can ask questions such as “How much did we pay each vendor?” and receive a report or dashboard. Connecting payment, order, and delivery records can make vendor performance and purchasing trends easier to identify—information that exists in enterprise data but otherwise requires manual queries and analysis.
 
-Users would choose our product for faster data preparation, easier access to business insights, and control over AI-generated mappings. A separate reporting database also reduces the need to repeatedly query the operational ERP. Accuracy remains a requirement to validate through testing, rather than an assumed benefit of using AI.
+Users would choose our product for faster data preparation, easier access to business insights, and control over AI-generated mappings. A separate reporting database also reduces the need to repeatedly query the operational ERP. 
+Similar functionality exists in modern ERP and data-management platforms, particularly for data integration, reporting, and analytics. However, our application is designed around an AI-agent-driven workflow rather than traditional rule-based configuration or manually operated ERP tools.
 
-The partner described a broader ERP automation ambition of reducing some eight-hour workloads to one or two hours. This is an illustrative estimate, not a measured result for our MVP; we will assess our own savings by comparing manual and assisted completion times.
+Modern enterprise ERP systems are primarily designed to store, manage, and process business records. While some platforms are adding AI assistants, their core workflows are generally not built around autonomous agents that can examine data structures, determine mappings and transformations, prepare data pipelines, and support users through the analytics process.
+
+Our application takes an agentic approach by placing the AI agent at the centre of the data preparation and analytics workflow. The agent can reason about source and target structures, propose how data should be transformed, and prepare pipelines for human review and approval. This reduces the amount of manual configuration required from data administrators while maintaining human control over the final result.
+
+The partner envision a broader ERP automation ambition of reducing some eight-hour workloads to one or two hours.
 
 This supports GenLedge’s stated direction: using AI assistants to perform repetitive enterprise work while people review results and focus on higher-value activities.
 
 
+
 #### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?
-[Figma Demo](https://www.figma.com/make/5FBkZzoaCpGV83S88IPkY1/--------CSC301-D1-Demo?p=f&t=dNeXPEpMKdHMtUZw-0)
+
 ##### US1 - Authentication：
 
 As a user of the app, I want to sign in securely in order to access GenLedge and manage my organization's data.
@@ -74,95 +81,217 @@ As a data reviewer, I want GenLedge to transform and load mapped source data int
 ##### US7 - Schedule and Monitor Pipelines
 
 As a data operator, I want to schedule and monitor my data pipelines in order to keep the warehouse data up to date and identify failed data loads.
-
+<p align="center">
+  <img src="image.png" alt="User story sent to partner">
+  <br>
+  <em>User story sent to partner</em>
+</p>
 
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
-Frontend
 
-React — UI library
+##### **Technology Stack**
 
-Vite — build tool and development server
+**Frontend**
+- **React** — UI framework
+- **Vite** — Build tool and development server
+- **TypeScript** — Programming language
+- **React Flow** — Mapping Studio visualization and interaction
 
-TypeScript — programming language
+**Backend**
+- **Node.js** — JavaScript runtime
+- **TypeScript** — Programming language
+- **Fastify** — Web framework
+- **PostgreSQL** — Relational database
+- **Prisma** — ORM for database access
 
-React Flow — UI library for the Mapping Studio
+**AI Agent**
+- **LangGraph.js** — Agent orchestration and workflow management
+- **Claude API / OpenAI API** — Large language model API
 
-Backend
+**Data Processing**
+- **Python** — Data processing and transformation runtime
 
-Node.js — JavaScript runtime
+##### **System Architecture**
 
-TypeScript — programming language
+```mermaid
+flowchart TD
 
-Fastify — web framework
+    subgraph SOURCE["SOURCE"]
+        direction LR
+        FILE["File Upload<br/>CSV / TSV / Excel / JSON"]
+        DB["Connected DocumentDB"]
+    end
 
-PostgreSQL — relational database
+    subgraph INTAKE["INTAKE"]
+        LAND["DocumentDB Intake<br/>intake_<slug><br/>Raw documents<br/>Original nesting preserved"]
+    end
 
-Prisma — ORM
+    subgraph DISCOVERY["SCHEMA DISCOVERY"]
+        SAMPLE["Sample up to 500 documents"]
+        FIELDS["Discovered Fields<br/>Field paths · Types · Samples<br/>Nested / repeating fields"]
+    end
 
-Agent
+    subgraph CONTROL["CONTROL PLANE — PostgreSQL"]
+        CATALOG["Warehouse Catalogue<br/>Target tables · Columns<br/>Descriptions · Merge keys"]
+        PIPELINE["Pipeline Configuration<br/>Mappings · Transformations<br/>Schedule · Run history"]
+        PENDING["Pending Schema Changes<br/>Human approval required"]
+    end
 
-LangGraph.js — agent orchestration framework
+    subgraph AI["AI ROUTING & MAPPING"]
+        ROUTE["AI Routing<br/>Determine target tables"]
+        MAP["AI Mapping<br/>Source → Target mappings<br/>Merge key · Transformations"]
+        VALIDATE["Validation<br/>Fields · Columns · Types · Identifiers"]
+    end
 
-Claude API or OpenAI API — LLM API
+    subgraph REVIEW["HUMAN REVIEW"]
+        STUDIO["Mapping Studio<br/>Review · Edit · Add · Remove mappings"]
+        APPROVE["Approve / Decline"]
+    end
 
-Data Processing
+    subgraph EXECUTION["PIPELINE EXECUTION"]
+        direction LR
+        RUNNOW["Run Now<br/>Node.js Row Runner<br/>Current limit: 500 docs"]
+        GLUE["AWS Glue / PySpark<br/>Transform + Stage + Merge"]
+    end
 
-Python — programming language/runtime
+    subgraph WAREHOUSE["DATA WAREHOUSE — PostgreSQL"]
+        STAGING["<table>__staging<br/>Glue only"]
+        TABLE["warehouse_<slug>.<table><br/>Typed · Clean · Analytics-ready"]
+    end
 
+    subgraph MONITOR["SCHEDULING & MONITORING"]
+        SCHEDULER["Scheduler Worker<br/>Interval / Cron"]
+        RUNS["Run History<br/>Status · Rows · Errors · Retries"]
+    end
 
-For the MVP deployment, we will use our own infrastructure to host GenLedge. We will use a Raspberry Pi and our own domain. This keeps the setup simple and low cost. It also lets us focus on the core agentic pipeline. If GenLedge is expanded later, we can move to AWS services such as S3, AWS Glue, and hosted PostgreSQL to support larger workloads.
+    FILE --> LAND
+    DB --> LAND
+
+    LAND --> SAMPLE
+    DB --> SAMPLE
+
+    SAMPLE --> FIELDS
+    FIELDS --> CATALOG
+
+    FIELDS --> ROUTE
+    CATALOG --> ROUTE
+
+    ROUTE --> MAP
+    MAP --> VALIDATE
+
+    VALIDATE --> STUDIO
+    STUDIO --> APPROVE
+
+    APPROVE --> PIPELINE
+
+    CATALOG --> PIPELINE
+    CATALOG --> PENDING
+    PENDING -->|"Approved"| CATALOG
+
+    PIPELINE --> RUNNOW
+    PIPELINE --> SCHEDULER
+
+    SCHEDULER -->|"Trigger"| GLUE
+
+    RUNNOW --> TABLE
+
+    DB -->|"Read source"| GLUE
+    GLUE --> STAGING
+    STAGING -->|"Merge on key"| TABLE
+
+    RUNNOW --> RUNS
+    GLUE --> RUNS
+    RUNS --> PIPELINE
+```
+
+----
 
 ## Intellectual Property Confidentiality Agreement 
-You can share the software and the code freely with anyone with or without a license, regardless of domain, for any use.
 
+> Note this section is **not marked** but must be completed briefly if you have a partner. If you have any questions, please ask on Piazza.
+>  
+
+_**1. You can share the software and the code freely with anyone with or without a license, regardless of domain, for any use.**_
+2. You can upload the code to GitHub or other similar publicly available domains.
+3. You will only share the code under an open-source license with the partner but agree to not distribute it in any way to any other entity or individual. 
+4. You will share the code under an open-source license and distribute it as you wish but only the partner can access the system deployed during the course.
+5. You will only reference the work you did in your resume, interviews, etc. You agree to not share the code or software in any capacity with anyone unless your partner has agreed to it.
+
+**Reason for the choice:**  
+Unfortunately, since the NDA and IP agreements cannot be signed, the partner will not use any of our code under the MIT License. Therefore, our team will not use any protocols or schemas provided by the partner, and the partner does not oppose any restrictions on sharing our work.
+
+----
 
 ## Teamwork Details
 
 #### Q6: Have you met with your team?
 
-![image1](image1.jpg)
-![image2](image2.jpg)
+<p align="center">
+  <img src="image1.jpg" width="45%">
+  <img src="image2.jpg" width="45%">
+  <br>
+  <em>Team-building dinner at Haidilao Hotpot</em>
+</p>
+For our team-building activity, all members of our group went to Haidilao Hotpot for dinner together. We enjoyed hot pot, shared food, and had a chance to talk and get to know each other better outside of class. It was a fun and relaxing experience that helped us become more comfortable with one another and strengthened our teamwork.
+
+Fun Facts:
 - Steven has a 4.0 cGPA.
 - Steven tutored everyone on this team to play basketball, football, badminton, jogging, swimming, cross - country, rock climbing, marathon, lifting, and diving. He was also once sponsored by Red Bull.
-- Michael, a member of our team, won first place in a go-kart tournament.
+- Michael won first place in a go-kart tournament.
 
 #### Q7: What are the roles & responsibilities on the team?
-![image3](image3.jpg)
+#### Team Roles
 
-Overall roles: 2 Frontend (visualization), 5 backend (API, data pipeline, cloud service, A.I.)
+##### Software-Related Roles
 
-Sida - backend: I chose this because this bit would be around practical use of AI and API’s which would help me in understanding how these practical tools should be correctly used so that I could use them wisely and strengthen my skills with using them.
+###### Sida — AI Integration & LLM APIs
+I chose this role because it focuses on the practical use of AI and APIs. I want to learn how these tools should be used correctly and make better decisions about when and how to use them. This will also help me strengthen my practical experience with AI and API integration.
 
-Daniel - backend & liaison: I chose backend because I want to learn how to build an AI agent and understand the agentic loop. I also want to gain more experience with APIs, cloud services, and system integration. My past experience with AI and data pipelines will help me contribute to the team. This role will also help me improve my backend skills and learn how these tools are used in a real system.
+###### Daniel — Agentic Loop & Liaison
+I chose this role because I want to learn how to build an AI agent and understand the agentic loop. I also want to gain more experience with APIs, cloud services, and system integration. My past experience with AI and data pipelines will help me contribute to this part of the project. As the liaison, I will also communicate with the supervisor and bring their feedback back to the team.
 
-Yifu Liang - backend: I chose the backend role to gain hands-on experience with APIs, cloud services, and system integration. My previous experience with AI and data pipelines allows me to contribute effectively while also developing practical backend engineering skills that I have had less exposure to.
+###### Yifu Liang — Backend API & System Integration
+I chose the backend role to gain hands-on experience with APIs, cloud services, and system integration. My previous experience with AI and data pipelines gives me a good foundation to contribute to the team while developing more practical backend engineering skills.
 
-Steven Yang - backend: I’d like to work on backend because that’s the area that matches my experience best. During my internship I worked on a Python data pipeline involving API integration, filtering, deduplication, and structured data processing, and I’ve also built database-backed applications before. 
+###### Steven Yang — Data Ingestion & Processing
+I’d like to work on this part because it matches my previous experience well. During my internship, I worked on a Python data pipeline that involved API integration, filtering, deduplication, and structured data processing. I have also built database-backed applications, so I want to apply that experience to GenLedge's data ingestion and processing.
 
-Xiran - frontend: Choosing this role since I have experience developing interactive data visualizations with D3.js and building responsive, multi-page web applications. I am interested in applying these skills to design clear and engaging visualizations while further improving my frontend development skills.
+###### Xiran — Schema Discovery & Data Representation
+I chose this role because I have experience developing interactive data visualizations with D3.js and building responsive, multi-page web applications. Working with source data and its structure lets me build on my experience with presenting and organizing data, while also developing a deeper understanding of how the data is processed before it is used by the rest of the system.
 
-Kunyu Li - Frontend: I chose this role because I have experience designing interactive, user-friendly, and easy-to-understand interfaces, and I’m interested in learning more about frontend development and design. 
+###### Kunyu Li — Pipeline Workflow & System Development
+I chose this role because I have experience designing interactive, user-friendly, and easy-to-understand interfaces. I want to apply that experience to how data pipelines are organized and managed, while also learning more about the technical side of system development and how different parts of the pipeline work together.
 
-Wuqingyi Wang - backend: I chose this role because I have previous experience with PostgreSQL, relational database design, and API-backed applications. I am interested in how AI agents analyze ERP data, generate mappings and transformations, and improve through validation and human feedback.
+###### Wuqingyi Wang — Database & Warehouse
+I chose this role because I have previous experience with PostgreSQL, relational database design, and API-backed applications. I am interested in working with the database and warehouse layer while also learning how AI agents analyze ERP data, generate mappings and transformations, and improve through validation and human feedback.
 
+##### Non-Software-Related Roles
 
+| Member | Role | Responsibilities |
+|---|---|---|
+| **Daniel** | Liaison & Agentic Loop Design | Design the overall agentic workflow and take responsibility for deploying the MVP on the team’s infrastructure. |
+| **Sida** | Technical Research | Research the AI frameworks, LLM APIs, and other technologies needed for the project. |
+| **Yifu Liang** | Documentation | Maintain technical documentation, architecture decisions, and important project information. |
+| **Steven Yang** | Input Mock Data Generation | Create realistic ERP-style datasets and different data structures for development and demonstration. |
+| **Xiran** | Test Design | Design test cases for the data pipeline, schema discovery, mappings, and edge cases. |
+| **Kunyu Li** | Project Logistics | Track meetings, deadlines, tasks, and other project coordination work. |
+| **Wuqingyi Wang** | Deployment | Manage the deployment of the MVP, including setting up the hosting environment, configuring the domain, and making sure the deployed system is accessible and running properly. |
 
 #### Q8: How will you work as a team?
 
-Meeting plan: 
+**Meeting plan:** 
 
-- On Tuesday: 
-  - Team meet before TUT: summarize weekly outcome and prepare questions to communicate with our amazing TA 
-  - TUT meeting with TA: clarify confusion, ask suggestions in technical development, etc. 
-  - Team meeting after partner meetings: summarize all the meeting outcomes, and allocate work for each member for the next week. 
-  - Meeting log in Notion 
- 
-- On Thursday: 
-  - Meeting with partners: report weekly progress, clarify any questions/misunderstandings that emerged
-  - Internal team meeting after the partner meeting: discuss the feedback received from the partner, confirm any required changes, and determine the direction for the next round of development.
+Our team plans to have meetings every Tuesday. Before the TUT meeting, we will have a short team meeting to summarize our progress from the previous week, share development updates, and prepare questions for our TA. We will then meet with our TA during TUT to clarify confusion and ask for suggestions about our technical development. After that, we will meet with our project partners to report our weekly progress and clarify any questions or misunderstandings. Finally, we will have a team meeting after the partner meeting to summarize the outcomes and divide the work for the following week. These meetings will mainly be online, and we will record the meeting notes in Notion.
+
+We will also have additional coding sessions, code reviews, and quick team syncs when needed. The time for these sessions is flexible, so we can schedule them based on the team's progress and availability.
+
+Before D1 is due, we will have two meetings with our project partner. The first meeting was on September 22 and lasted about one hour. Our partner gave us an overall introduction and explained the project. The second meeting was on October 1 and lasted about 40 minutes. We discussed questions about the user stories and technical stack. After D1, we plan to have regular meetings with our partner every Thursday at 6:00 PM to discuss progress and address any new questions.
+
+
 
   
 #### Q9: How will you organize your team?
+
 We will use a combination of **Notion, GitHub, and group communication channels** to organize our work and track project progress.
 
 - **Task tracking and documentation**
@@ -182,6 +311,8 @@ We will use a combination of **Notion, GitHub, and group communication channels*
     - Features required for the current milestone or demo
     - Feedback and requirements received from our TA and project partner
   - Blocking or high-dependency tasks will be addressed earlier when they affect other members' work.
+  - For technical development, we will follow a planned development order. We will first set up TypeScript, Node.js, and the project structure. Then, we will develop the backend using Fastify, PostgreSQL, and Prisma. After that, we will implement Python data processing. We will then add the AI agent using LangGraph.js and the Claude/OpenAI API. Next, we will develop the frontend using React, Vite, and React Flow. We will then integrate the full pipeline. Finally, we will add scheduling and monitoring.
+
 
 - **Task assignment**
   - Tasks will mainly be assigned during our **weekly team meetings**.
@@ -252,41 +383,50 @@ We will use a combination of **Notion, GitHub, and group communication channels*
 
 #### Q11. How does your team fit within the overall team organisation of the partner?
 
-Our team will act as a product development team focused on data engineering and analytics within GenLedge’s broader AI-native ERP initiative. We will work with the founder and operations lead to clahrify requirements and priorities, and use the existing developer’s knowledge to understand and extend the current MVP.
+Our team will act as a product development team focused on data engineering and processing pipeline within GenLedge’s broader AI-native ERP initiative. We will work with the founder and operations lead to clarify requirements and priorities, and use the existing developer’s knowledge to understand and extend the current MVP.
 
 Our primary responsibility is to improve the path from enterprise data to useful business insights. This includes developing AI-assisted source-to-target mappings, enabling users to review and approve pipelines, and building reporting capabilities for finance and operations users. These features support the broader ERP without requiring our team to build the entire platform.
 
-Our role also includes software maintenance and quality assurance. The partner explained that the existing prototype contains incomplete functionality and bugs, so we will investigate and improve these areas. For example, we will verify that mappings transfer records correctly and that vendor-payment reports produce accurate totals. This reflects the partner’s emphasis on reliability: incorrect analytics could influence real financial decisions.
+Our role also includes software maintenance and quality assurance. The partner explained that the existing prototype contains incomplete functionality and bugs, so we will investigate and improve these areas. For example, we will verify that mappings transfer records correctly and that vendor-payment reports produce accurate totals. This reflects the partner’s emphasis on reliability: incorrect analytics could influence real financial decisions. (Update: Unfortunately, due to code release circumstances, we are building the pipeline on our own. There will be no starting code provided to us.)
 
 This role fits our team’s experience with data processing, LLMs, AI agents, and full-stack development. It also matches the partner’s expectation that we first understand the existing architecture and then contribute tested improvements to a product intended for real customers.
+
 
 
 #### Q12. How does your project fit within the overall product from the partner?
 
 **Fit within GenLedge:** GenLedge already has an ERP platform where AI agents automate operational workflows. Our project adds the analytics layer on top of this system, turning ERP and related business data into analytics-ready datasets, reports, and dashboards without placing reporting workloads directly on the operational system. 
 
-**Our contribution:** We are extending an existing MVP rather than starting from scratch. The current prototype supports source introspection, target creation, manual pipeline mapping, run history, and data loading; our main contribution is evolving this into an agentic pipeline where the LLM proposes mappings and transformations and admins review or override them. 
+**Our contribution:** We are extending an existing MVP rather than starting from scratch. The current prototype supports source introspection, target creation, manual pipeline mapping, run history, and data loading; our main contribution is evolving this into an agentic pipeline where the LLM proposes mappings and transformations and admins review or override them. (Edit: We will be starting from scratch. Our contribution is to make the pipeline working from scratch. See notes below.)
 
 **Partner contribution/dependencies:** GenLedge provides the existing ERP, data sources, current pipeline prototype, repository, and production infrastructure context. Their engineering/platform team remains responsible for broader connector, security, observability, and infrastructure concerns. 
 
+**Other Team Contribution:** There will be another team from this course working at the analytic portion. As the data is processed, they are ready to go through another pipeline to answer users’ questions by letting another AI agent access those data.
+
 **Success:** The project succeeds when the agent can generate useful mappings, an admin can verify and execute them end-to-end, and the resulting curated data powers at least one meaningful customer-facing report with drill-down capability. 
+
+**Product:** We expect the project to end with a functional prototype that includes all the key features required for the data pipeline to run end-to-end. The prototype should demonstrate the main workflow, from importing and mapping data to transforming, loading, and monitoring the pipeline. It does not need to be a production-ready product, but it should provide a working demonstration of the core functionality.
+
+(Note: The information described above is what we initially expected to receive from our project partner. However, due to the partner's IP policy, we will not receive any existing code, database schemas, or databases from GenLedge. As a result, we will develop the project independently and use our own data, schemas, and implementation for development and testing. We will still communicate with the partner regularly to clarify requirements and receive feedback on our progress.)
 
 
 ## Potential Risks
 
 #### Q13. What are some potential risks to your project?
 
-**Incorrect AI-generated mappings:** The agent may generate inaccurate source-to-target mappings or transformations, especially when schemas are ambiguous or customer data is inconsistent. Since the project explicitly assumes that LLM outputs may be incomplete or wrong, we will keep a human-in-the-loop workflow where admins review, edit, and approve configurations before execution. 
+**Incorrect AI-generated mappings:** The agent may generate inaccurate source-to-target mappings or transformations, especially when schemas are ambiguous or customer data is inconsistent. Since the project explicitly assumes that LLM outputs may be incomplete or wrong, we will keep a human-in-the-loop workflow where admins review, edit, and approve configurations before execution.
 
-**Unresolved architecture decisions:** Some production choices are still open, including whether AWS Glue can handle GenLedge's nested DocumentDB data, how transformations should be divided between mappings, SQL/dbt, and Lambda, and whether QuickSight satisfies reporting requirements. Early prototypes and technical spikes will help us resolve these before they block later work. 
+**Unresolved architecture decisions:** Some production choices are still open, including whether AWS Glue can handle GenLedge's nested DocumentDB data, how transformations should be divided between mappings, SQL/dbt, and Lambda, and whether QuickSight satisfies reporting requirements. Early prototypes and technical spikes will help us resolve these before they block later work.
 
-**Access to production dependencies:** Final validation requires authorized access to real source and target environments rather than only local mock databases. Delays in credentials, infrastructure, or representative data could slow integration, so we should request access early while maintaining mock environments for development. 
+**Access to production dependencies:** Final validation requires authorized access to real source and target environments rather than only local mock databases. Delays in credentials, infrastructure, or representative data could slow integration, so we should request access early while maintaining mock environments for development.
 
-**Scope and integration complexity:** Moving from the current ETL-style MVP toward S3, Redshift, authentication, agentic configuration, and analytics involves several architectural changes rather than simple component replacements. We should prioritize the end-to-end agentic mapping workflow first and defer lower-priority production enhancements if necessary.
+**Limited partner support due to IP restrictions:** Our partner may not be able to provide exact input schemas, real data examples, or detailed implementation information because of IP restrictions. This could make it harder for us to understand some real-world requirements and edge cases. We will address this by using representative mock schemas and data, asking the partner for non-confidential examples or general requirements when possible, and validating our assumptions during regular meetings.
+
+**Enterprise data privacy with external LLMs:** Using external LLM APIs may create privacy concerns if sensitive enterprise data is sent to an external provider. We need to determine what data can safely be sent to the LLM and how it should be protected. We will minimize the amount of sensitive data sent to the model, avoid sending unnecessary personally identifiable or confidential information, and investigate appropriate enterprise API privacy and data-handling options before integrating the LLM. Where possible, we will send metadata such as schemas and sample structures rather than full production records.
 
 
 #### Q14. What are some potential mitigation strategies for the risks you identified?
-Establish a more efficient communication channel between team and partner.
-Be specific on the user story and evaluate the workload accurately. 
-Be reasonable on the project scope. 
 
+**Limited partner support due to IP restrictions:** We will create mock examples using LLMs and use schemas from open-source or publicly documented ERP systems. This will help us develop and test the pipeline even without access to the partner's exact schemas or real data examples.
+
+**Unresolved architecture decisions:** We have a general picture of the overall architecture, but some technical decisions will be made as we develop the project. We will use prototypes and testing to help us determine the best approach as we move forward.
