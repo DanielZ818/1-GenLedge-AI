@@ -78,20 +78,35 @@ As a data operator, I want to schedule and monitor my data pipelines in order to
 
 #### Q5: Have you decided on how you will build it? Share what you know now or tell us the options you are considering.
 Frontend
+
 React — UI library
+
 Vite — build tool and development server
+
 TypeScript — programming language
+
 React Flow — UI library for the Mapping Studio
+
 Backend
+
 Node.js — JavaScript runtime
+
 TypeScript — programming language
+
 Fastify — web framework
+
 PostgreSQL — relational database
+
 Prisma — ORM
+
 Agent
+
 LangGraph.js — agent orchestration framework
+
 Claude API or OpenAI API — LLM API
+
 Data Processing
+
 Python — programming language/runtime
 
 
