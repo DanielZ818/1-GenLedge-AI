@@ -1,52 +1,61 @@
 # GenLedge Connector
 
-GenLedge Connector is a CSC301 planning repository for an agentic data pipeline that prepares enterprise ERP records for analytics. It is useful to the GenLedge partner, teaching team, and future implementation team because it records the product problem, target users, MVP stories, architecture, team responsibilities, risks, and supporting evidence in one reviewable place.
+## Partner Intro
 
-The repository shows how a human reviewer would supervise an AI agent that proposes source-to-target mappings and transformations before data is loaded into a reporting database. The current checkout is a planning deliverable, so it provides the product specification and media assets rather than a runnable application.
+GenLedge is an AI-powered ERP platform that automates business operations such as invoice processing, delivery tracking, and payments. Our team works with its founder, operations lead, and developer to extend the existing data pipeline prototype. Daniel is our team's primary liaison; partner contact names and emails are to be added.
 
-## Tech Stack And Why Chosen
+## Description about the project
 
-- **Markdown** documents the product plan in a format that is easy to review in GitHub and update through pull requests.
-- **Mermaid** expresses the system architecture directly beside the written design, keeping the diagram versioned with the plan.
-- **CSV** stores the enrolled team roster in a simple, portable data shape.
-- **PNG and JPEG** assets provide evidence for user-story communication and team-building activities.
-- **Git and GitHub pull requests** provide change history, review requests, and a shared record of planning decisions.
-- **Planned product stack:** React, Vite, TypeScript, React Flow, Node.js, Fastify, PostgreSQL, Prisma, LangGraph.js, Claude or OpenAI APIs, and Python. These technologies are documented in `deliverables/D1/planning.md`; implementation code is not yet part of this repository.
+GenLedge Connector helps data and operations analysts prepare ERP data for reporting with less manual work. An AI agent proposes data mappings and transformations, which users review and approve before loading data into a separate reporting database. This helps teams answer questions about vendor performance, deliveries, and payments.
 
-## Repository Contents
+## Key Features
 
-- `deliverables/D1/planning.md` - the product and architecture plan, including Q1-Q14, MVP user stories, roles, risks, and mitigations.
-- `deliverables/D1/` - the finalized plan's supporting images and mockup note.
-- `deliverables/team/` - the team roster, stakeholder notes, and meeting information.
-- `deliverables/D2/`, `deliverables/D2_R/`, and `deliverables/D3/` - later deliverable templates and reports.
-- `readme-template.md` - the course README reference template.
+Planned MVP features:
 
-## Install And Bootstrap
+1. Secure sign-in to access organizational data.
+2. File uploads or database connections to import source data.
+3. Automatic discovery of source tables and fields.
+4. AI-generated mappings and transformations.
+5. Mapping review and editing before approval.
+6. Pipeline execution to transform and load data for analytics.
+7. Pipeline scheduling and run monitoring.
 
-No package installation, database setup, or environment variables are required for this planning-only checkout. Bootstrap from source with Git:
+## Instructions
 
-```bash
-git clone https://github.com/DanielZ818/1-GenLedge-AI.git
-cd 1-GenLedge-AI
-```
+Intended user workflow:
 
-Open `deliverables/D1/planning.md` in GitHub or a Markdown viewer with Mermaid support.
+1. Sign in and upload a file or connect a source database.
+2. Review the discovered data structure and specify the target dataset.
+3. Generate mappings with the AI agent, then review and edit them.
+4. Approve and run the pipeline; check the results in the target database.
+5. Schedule future runs and review run history for failures.
 
-## Day-To-Day Use
+Account provisioning, supported file formats, and exact interface steps will be confirmed during implementation.
 
-1. Update the relevant question or section in `deliverables/D1/planning.md` as the product decisions change.
-2. Keep supporting images beside the plan so relative links continue to render.
-3. Update the team files under `deliverables/team/` when roster or meeting information changes.
-4. Use a branch and pull request for each focused documentation change, then request review from the team.
+## Development requirements
 
-## Commands And Options
+The planned stack uses React, Vite, TypeScript, and React Flow for the frontend; Node.js, Fastify, PostgreSQL, and Prisma for the backend; LangGraph.js with Claude or OpenAI for the agent; and Python for data processing.
 
-This repository has no executable application or command-line entrypoint yet, so it has no application flags or runtime options. The documented workflow is file review through GitHub and a Markdown viewer.
+Local setup requires installing project dependencies, configuring database connections and AI credentials, initializing the database, and starting the frontend and backend. Runtime versions, environment variables, and exact commands will be added once verified in the repository.
 
-## Deployment And Access
+## Deployment and Github Workflow
 
-There is no deployed application or runtime access URL in this planning phase. Product references are linked from the plan, including the pipeline visualization, GenLedge platform diagram, and Figma mockup.
+The team uses GitHub branches, commits, and pull requests, with teammate review before merging. Notion tracks task ownership and progress. Branch conventions, reviewers, and merge ownership remain to be confirmed.
 
-## License And Sharing
+Deployment will be coordinated with GenLedge's engineering/platform team. Hosting tools and release steps are still being determined. This workflow supports shared development and review of data-processing changes.
 
-The planning document records that the team may share the project code and documentation freely. A repository license has not yet been selected with the partner.
+## Coding Standards and Guidelines
+
+Proposed guidelines: use consistent formatting, descriptive names, and clearly scoped functions. Review code through pull requests, validate inputs, and keep credentials outside source control.
+
+## Licenses
+
+The planning agreement allows the software and code to be shared and used freely for any purpose. A specific repository license is still to be selected with the partner.
+
+## Deployed URL / Access Instructions
+
+Deployment URL and account access details: to be added. The [Figma demo](https://www.figma.com/make/5FBkZzoaCpGV83S88IPkY1/--------CSC301-D1-Demo?p=f&t=dNeXPEpMKdHMtUZw-0) provides a design reference.
+
+## D3 Improvement Highlight
+
+To be updated with completed improvements since D2 and where reviewers can find them; these changes are not recorded in the planning document.
