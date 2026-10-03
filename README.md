@@ -2,7 +2,7 @@
 
 ## Partner Intro
 
-GenLedge is an AI-powered ERP platform that automates business operations such as invoice processing, delivery tracking, and payments. Our team works with its founder, operations lead, and developer to extend the existing data pipeline prototype. Daniel is our team's primary liaison; partner contact names and emails are to be added.
+GenLedge is an AI-powered ERP platform that automates business operations such as invoice processing, delivery tracking, and payments. Our team is building an independent data pipeline from scratch. The partner provides project direction, requirements, priorities, and feedback. Daniel is our team's primary liaison; partner contact names and emails are to be added.
 
 ## Description about the project
 
@@ -40,9 +40,9 @@ Local setup requires installing project dependencies, configuring database conne
 
 ## Deployment and Github Workflow
 
-The team uses GitHub branches, commits, and pull requests, with teammate review before merging. Notion tracks task ownership and progress. Branch conventions, reviewers, and merge ownership remain to be confirmed.
+The team uses a private GitHub repository with branches, commits, and pull requests, with teammate review before merging. Notion tracks task ownership and progress. Branch conventions, reviewers, and merge ownership remain to be confirmed.
 
-Deployment will be coordinated with GenLedge's engineering/platform team. Hosting tools and release steps are still being determined. This workflow supports shared development and review of data-processing changes.
+Hosting tools and release steps are still being determined. The partner provides direction and feedback. This workflow supports shared development and review of data-processing changes.
 
 ## Coding Standards and Guidelines
 
@@ -50,7 +50,7 @@ Proposed guidelines: use consistent formatting, descriptive names, and clearly s
 
 ## Licenses
 
-The planning agreement allows the software and code to be shared and used freely for any purpose. A specific repository license is still to be selected with the partner.
+The selected planning option allows the team to reference the work in resumes and interviews. The team will not share the code or software unless the partner agrees. The team will use its own schemas, test data, and implementation.
 
 ## Deployed URL / Access Instructions
 
