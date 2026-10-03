@@ -18,7 +18,7 @@ For example, an enterprise may want to know how each vendor has performed over t
 
 Our project aims to automate this process with an agentic data pipeline. The user specifies a source and the desired target data, and the AI agent examines the source and target structures, determines how the data should be mapped and transformed, and generates the pipeline for approval and execution.
 
-Our team will build this as a web-based application focused primarily on the backend, covering the pipeline from extracting data from the ERP database, providing the relevant data and tools to the AI agent, executing the generated pipeline, and exporting analytics-ready data into a separate target database. The next team will focus on taking this preprocessed data, and build an agent that could answer all user inquiries on the data (for example analyze the sales trend).
+Our team will build this as a web-based application focused primarily on the backend, covering the pipeline from extracting data from the ERP database, providing the relevant data and tools to the AI agent, executing the generated pipeline, and exporting analytics-ready data into a separate target database. The next team will focus on using this preprocessed data to build an agent that could answer all user inquiries on the data (for example, to analyze sales trends).
 
 *Refer to [pipeline visualization](https://drive.google.com/file/d/1Iw_YCqHsjISCauQNGoym3mWENR66wOL0/view?usp=drive_link), [genledge platform diagram](https://drive.google.com/file/d/1lNJbsDIhyfYPJpp-XcwnQV9R-BybB56t/view?usp=sharing), and [mockup figma](https://www.figma.com/make/5FBkZzoaCpGV83S88IPkY1/Demo?code-node-id=0-6\&fullscreen=1)*
 
@@ -46,15 +46,15 @@ Modern enterprise ERP systems are primarily designed to store, manage, and proce
 
 Our application takes an agentic approach by placing the AI agent at the centre of the data preparation and analytics workflow. The agent can reason about source and target structures, propose how data should be transformed, and prepare pipelines for human review and approval. This reduces the amount of manual configuration required from data administrators while maintaining human control over the final result.
 
-The partner envision a broader ERP automation ambition of reducing some eight-hour workloads to one or two hours.
+The partner envisions a broader ERP automation ambition of reducing some eight-hour workloads to one or two hours.
 
 This supports GenLedge’s stated direction: using AI assistants to perform repetitive enterprise work while people review results and focus on higher-value activities.
 
 
 
-#### Q4: What are the user stories that make up the Minumum Viable Product (MVP)?
+#### Q4: What are the user stories that make up the Minimum Viable Product (MVP)?
 
-##### US1 - Authentication：
+##### US1 - Authentication:
 
 As a user of the app, I want to sign in securely in order to access GenLedge and manage my organization's data.
 
@@ -64,7 +64,7 @@ As a data owner, I want to upload files or connect my organization's database in
 
 ##### US3 - Discover Source Data
 
-As a data owner, I want GenLedge to automatically discover and display the structure of my source data in order to understand what information is available for processing
+As a data owner, I want GenLedge to automatically discover and display the structure of my source data in order to understand what information is available for processing.
 
 ##### US4 - Automatically Map / Route Data
 
@@ -211,14 +211,13 @@ flowchart TD
 > Note this section is **not marked** but must be completed briefly if you have a partner. If you have any questions, please ask on Piazza.
 >  
 
-_**1. You can share the software and the code freely with anyone with or without a license, regardless of domain, for any use.**_
+1. You can share the software and the code freely with anyone with or without a licence, regardless of domain, for any use.
 2. You can upload the code to GitHub or other similar publicly available domains.
-3. You will only share the code under an open-source license with the partner but agree to not distribute it in any way to any other entity or individual. 
-4. You will share the code under an open-source license and distribute it as you wish but only the partner can access the system deployed during the course.
-5. You will only reference the work you did in your resume, interviews, etc. You agree to not share the code or software in any capacity with anyone unless your partner has agreed to it.
+3. You will only share the code under an open-source licence with the partner but agree to not distribute it in any way to any other entity or individual.
+4. You will share the code under an open-source licence and distribute it as you wish but only the partner can access the system deployed during the course.
+5. **Selected option.** You will only reference the work you did in your resume and interviews. You agree not to share the code or software unless the partner agrees.
 
-**Reason for the choice:**  
-Unfortunately, since the NDA and IP agreements cannot be signed, the partner will not use any of our code under the MIT License. Therefore, our team will not use any protocols or schemas provided by the partner, and the partner does not oppose any restrictions on sharing our work.
+**Reason for the choice:** We cannot sign the NDA or IP agreement. The partner will provide project direction only. The partner will not provide code, schemas, databases, protocols, real data, repositories, or implementation details. We will build the project from zero. We will design our own schemas, test inputs, mock data, and implementation. We will not share our code or software unless the partner agrees.
 
 ----
 
@@ -236,7 +235,7 @@ For our team-building activity, all members of our group went to Haidilao Hotpot
 
 Fun Facts:
 - Steven has a 4.0 cGPA.
-- Steven tutored everyone on this team to play basketball, football, badminton, jogging, swimming, cross - country, rock climbing, marathon, lifting, and diving. He was also once sponsored by Red Bull.
+- Steven tutored everyone on this team to play basketball, football, and badminton, and to go jogging, swimming, rock climbing, marathon running, weightlifting, and diving. He was also once sponsored by Red Bull.
 - Michael won first place in a go-kart tournament.
 
 #### Q7: What are the roles & responsibilities on the team?
@@ -281,7 +280,7 @@ I chose this role because I have previous experience with PostgreSQL, relational
 
 **Meeting plan:** 
 
-Our team plans to have meetings every Tuesday. Before the TUT meeting, we will have a short team meeting to summarize our progress from the previous week, share development updates, and prepare questions for our TA. We will then meet with our TA during TUT to clarify confusion and ask for suggestions about our technical development. After that, we will meet with our project partners to report our weekly progress and clarify any questions or misunderstandings. Finally, we will have a team meeting after the partner meeting to summarize the outcomes and divide the work for the following week. These meetings will mainly be online, and we will record the meeting notes in Notion.
+Our team plans to have meetings every Tuesday. Before the TUT meeting, we will have a short team meeting to summarize our progress from the previous week, share development updates, and prepare questions for our TA. We will then meet with our TA during TUT to resolve questions and clarify uncertainties about our technical development. After that, we will meet with our project partners to report our weekly progress and clarify any questions or misunderstandings. Finally, we will have a team meeting after the partner meeting to summarize the outcomes and divide the work for the following week. These meetings will mainly be online, and we will record the meeting notes in Notion.
 
 We will also have additional coding sessions, code reviews, and quick team syncs when needed. The time for these sessions is flexible, so we can schedule them based on the team's progress and availability.
 
@@ -332,6 +331,7 @@ We will use a combination of **Notion, GitHub, and group communication channels*
   - We will use **GitHub** for source-code management and version control.
   - Development work will be organized using branches, commits, and pull requests.
   - Pull requests will allow team members to review changes before they are merged into the shared codebase.
+  - The repository will remain private. We will not distribute the code publicly unless the partner agrees.
   - The repository will also be used to track the implementation status of different project components.
 
 - **Team and partner communication**
@@ -346,7 +346,7 @@ We will use a combination of **Notion, GitHub, and group communication channels*
 
 * What is the expected frequency? What methods/channels will be used?
 
-  We will use WeChat as our main communication platform among the team. We will use email/WhatsApp when communicating with our partners. 
+  We will use WeChat as our main communication platform within the team. We will use email/WhatsApp when communicating with our partners.
 
 * If you have a partner project, what is your process for communicating with your partner? Who is responsible?
 
@@ -359,7 +359,7 @@ We will use a combination of **Notion, GitHub, and group communication channels*
 
   **Fixed cadence:** We hold a weekly team sync, a weekly partner sync (as needed), and async standups on other weekdays.
 
-  **Advance notice:** If someone cannot attend, they must notify the team at least 24 hours in advance (except emergencies) and post a written update covering: done, next, blockers.
+  **Advance notice:** If someone cannot attend, they must notify the team at least 24 hours in advance (except in emergencies) and post a written update covering completed work, next steps, and blockers.
 
   **Meeting notes:** A rotating note-taker records decisions, action items, and owners in a shared doc.
 
@@ -383,32 +383,27 @@ We will use a combination of **Notion, GitHub, and group communication channels*
 
 #### Q11. How does your team fit within the overall team organisation of the partner?
 
-Our team will act as a product development team focused on data engineering and processing pipeline within GenLedge’s broader AI-native ERP initiative. We will work with the founder and operations lead to clarify requirements and priorities, and use the existing developer’s knowledge to understand and extend the current MVP.
+Our team will act as an independent product development team within GenLedge’s broader AI-native ERP initiative. The partner will give us project direction, requirements, priorities, and feedback.
 
 Our primary responsibility is to improve the path from enterprise data to useful business insights. This includes developing AI-assisted source-to-target mappings, enabling users to review and approve pipelines, and building reporting capabilities for finance and operations users. These features support the broader ERP without requiring our team to build the entire platform.
 
-Our role also includes software maintenance and quality assurance. The partner explained that the existing prototype contains incomplete functionality and bugs, so we will investigate and improve these areas. For example, we will verify that mappings transfer records correctly and that vendor-payment reports produce accurate totals. This reflects the partner’s emphasis on reliability: incorrect analytics could influence real financial decisions. (Update: Unfortunately, due to code release circumstances, we are building the pipeline on our own. There will be no starting code provided to us.)
+We will build the data engineering and processing pipeline from zero. We will design our own schemas, test inputs, mock data, and implementation. We will not use partner code, databases, schemas, protocols, repositories, or other implementation materials. We will test the pipeline and verify that mappings, transformations, and reports work correctly.
 
-This role fits our team’s experience with data processing, LLMs, AI agents, and full-stack development. It also matches the partner’s expectation that we first understand the existing architecture and then contribute tested improvements to a product intended for real customers.
-
-
+This role fits our team’s experience with data processing, LLMs, AI agents, and full-stack development. It matches the partner’s expectation that we build and test a reliable project from zero.
 
 #### Q12. How does your project fit within the overall product from the partner?
 
 **Fit within GenLedge:** GenLedge already has an ERP platform where AI agents automate operational workflows. Our project adds the analytics layer on top of this system, turning ERP and related business data into analytics-ready datasets, reports, and dashboards without placing reporting workloads directly on the operational system. 
 
-**Our contribution:** We are extending an existing MVP rather than starting from scratch. The current prototype supports source introspection, target creation, manual pipeline mapping, run history, and data loading; our main contribution is evolving this into an agentic pipeline where the LLM proposes mappings and transformations and admins review or override them. (Edit: We will be starting from scratch. Our contribution is to make the pipeline working from scratch. See notes below.)
+**Our contribution:** We will build the pipeline from scratch. We will create the schemas, test inputs, mock data, and implementation. The pipeline will support source discovery, agentic mappings, transformations, human review, loading, and monitoring.
 
-**Partner contribution/dependencies:** GenLedge provides the existing ERP, data sources, current pipeline prototype, repository, and production infrastructure context. Their engineering/platform team remains responsible for broader connector, security, observability, and infrastructure concerns. 
+**Partner contribution/dependencies:** The partner will provide project direction, requirements, priorities, and feedback. The partner will not provide code, schemas, databases, protocols, real data, repositories, or production infrastructure.
 
-**Other Team Contribution:** There will be another team from this course working at the analytic portion. As the data is processed, they are ready to go through another pipeline to answer users’ questions by letting another AI agent access those data.
+**Other Team Contribution:** There will be another team from this course working on the analytics portion. As the data is processed, they will use another pipeline to answer users’ questions by allowing another AI agent to access that data.
 
 **Success:** The project succeeds when the agent can generate useful mappings, an admin can verify and execute them end-to-end, and the resulting curated data powers at least one meaningful customer-facing report with drill-down capability. 
 
 **Product:** We expect the project to end with a functional prototype that includes all the key features required for the data pipeline to run end-to-end. The prototype should demonstrate the main workflow, from importing and mapping data to transforming, loading, and monitoring the pipeline. It does not need to be a production-ready product, but it should provide a working demonstration of the core functionality.
-
-(Note: The information described above is what we initially expected to receive from our project partner. However, due to the partner's IP policy, we will not receive any existing code, database schemas, or databases from GenLedge. As a result, we will develop the project independently and use our own data, schemas, and implementation for development and testing. We will still communicate with the partner regularly to clarify requirements and receive feedback on our progress.)
-
 
 ## Potential Risks
 
@@ -418,15 +413,15 @@ This role fits our team’s experience with data processing, LLMs, AI agents, an
 
 **Unresolved architecture decisions:** Some production choices are still open, including whether AWS Glue can handle GenLedge's nested DocumentDB data, how transformations should be divided between mappings, SQL/dbt, and Lambda, and whether QuickSight satisfies reporting requirements. Early prototypes and technical spikes will help us resolve these before they block later work.
 
-**Access to production dependencies:** Final validation requires authorized access to real source and target environments rather than only local mock databases. Delays in credentials, infrastructure, or representative data could slow integration, so we should request access early while maintaining mock environments for development.
+**Limited access to partner systems:** The partner will not provide production systems or real data. We will use local and mock environments for development and testing. We will design our own test inputs.
 
-**Limited partner support due to IP restrictions:** Our partner may not be able to provide exact input schemas, real data examples, or detailed implementation information because of IP restrictions. This could make it harder for us to understand some real-world requirements and edge cases. We will address this by using representative mock schemas and data, asking the partner for non-confidential examples or general requirements when possible, and validating our assumptions during regular meetings.
+**Limited partner support due to IP restrictions:** The partner will provide direction and feedback only. The partner will not provide exact input schemas, real data examples, code, or detailed implementation information. We will use representative schemas, mock data, and test inputs that we design ourselves.
 
 **Enterprise data privacy with external LLMs:** Using external LLM APIs may create privacy concerns if sensitive enterprise data is sent to an external provider. We need to determine what data can safely be sent to the LLM and how it should be protected. We will minimize the amount of sensitive data sent to the model, avoid sending unnecessary personally identifiable or confidential information, and investigate appropriate enterprise API privacy and data-handling options before integrating the LLM. Where possible, we will send metadata such as schemas and sample structures rather than full production records.
 
 
 #### Q14. What are some potential mitigation strategies for the risks you identified?
 
-**Limited partner support due to IP restrictions:** We will create mock examples using LLMs and use schemas from open-source or publicly documented ERP systems. This will help us develop and test the pipeline even without access to the partner's exact schemas or real data examples.
+**Limited partner support due to IP restrictions:** We will design all test inputs and mock data ourselves. We will use schemas from open-source or publicly documented ERP systems when useful. We will validate requirements through the partner’s direction and feedback.
 
 **Unresolved architecture decisions:** We have a general picture of the overall architecture, but some technical decisions will be made as we develop the project. We will use prototypes and testing to help us determine the best approach as we move forward.
